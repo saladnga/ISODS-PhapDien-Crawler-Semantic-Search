@@ -1,0 +1,25 @@
+$(document).ready(function () {
+    $(".btnZoom").button({ icons: { primary: "ui-icon-arrow-4-diag"} });
+    $(".btnZoomIn").button({ icons: { primary: "ui-icon-arrow-4"} });
+    $(".btnSearch").button({ icons: { primary: "ui-icon-search"} });
+    $(".btnMinus").button({ icons: { primary: "ui-icon-minus"} });
+    $(".btnAdd").button({ icons: { primary: "ui-icon-plusthick"} });
+    $(".btnAdds").button({ icons: { primary: "ui-icon-document"} });
+    $(".btnEdit").button({ icons: { primary: "ui-icon-pencil"} });
+    $(".btnSend").button({ icons: { primary: "ui-icon-arrowreturnthick-1-e"} });
+    $(".btnCheck").button({ icons: { primary: "ui-icon-check"} });
+    $(".btnReject").button({ icons: { primary: "ui-icon-cancel"} });
+    $(".btnOk").button({ icons: { primary: "sm-icon-valid"} });
+    $(".btnWarning").button({ icons: { primary: "ui-icon-alert"} });
+    $(".btnClose").button({ icons: { primary: "ui-icon-circle-close"} });
+    $(".btnDelete").button({ icons: { primary: "ui-icon-trash"} });
+    $(".btnDownload").button({ icons: { primary: "ui-icon-arrowthickstop-1-s"} });
+    $(".btnConfig").button({ icons: { primary: "ui-icon-wrench"} });
+    $(".btnPrint").button({ icons: { primary: "ui-icon-print"} });
+    $(".btnBack").button({ icons: { primary: "ui-icon-circle-arrow-w"} });
+    $(".btnForward").button({ icons: { primary: "ui-icon-circle-arrow-e"} });
+    $(".btnUp").button({ icons: { primary: "ui-icon-circle-arrow-n"} });
+    $(".btnDown").button({ icons: { primary: "ui-icon-circle-arrow-s"} });
+    $(".headerRestore").button({ icons: { primary: "ui-icon-rescue-restor"} });
+    $(".btnAction").button({ icons: { primary: "ui-icon-action"} });
+});
