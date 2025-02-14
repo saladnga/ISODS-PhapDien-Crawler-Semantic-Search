@@ -19,15 +19,15 @@
 
 ### Approach:
 
-1.‎ Download PhapDien:
--   PhapDien link:  https://phapdien.moj.gov.vn/Pages/chi-tiet-bo-phap-dien.aspx
-2.‎ Create Additional Directories:
+1. Download PhapDien:
+-  PhapDien link:  https://phapdien.moj.gov.vn/Pages/chi-tiet-bo-phap-dien.aspx
+2. Create Additional Directories:
 - vbpl: For full text HTML documents
 - property: For property pages of the documents
 - history: For history pages of the documents
 - related: For related pages of the documents
 - pdf: For PDF files of the documents
-3.‎ Crawl and Save HTML Documents:
+3. Crawl and Save HTML Documents:
 - Use os and BeautifulSoup to extract and iterate through unique ItemIDs from the index HTML files in the BoPhapDienDienTu/demuc directory
 - For each ItemIDs, construct their correspond URLs and save their content using request:
     - For full text:
@@ -46,14 +46,14 @@
 	    - URL: https://vbpl.vn/tw/Pages/vbpq-vanbanlienquan.aspx?&ItemID=<ItemID>
 	    - File path: r_<ItemID>.html
 	    - Designated directory: BoPhapDienDienTu/related
-4.‎ Download PDF Files Dynamically:
+4. Download PDF Files Dynamically:
 - Use Selenium and ChromDriver to extract and download PDF files. 
 - Locate the PDF link in the data attribute of the <object> tag using XPath
     + For PDF:
         - URL: https://vbpl.vn/tw/Pages/ vbpq-van-ban-goc?&ItemID=<ItemID>
 	    - File path: pdf_<ItemID>.pdf
 	    - Designated directory: BoPhapDienDienTu/pdf
-5.‎ Optimize Downloads with Multiprocessing:
+5. Optimize Downloads with Multiprocessing:
 - Use ThreadPoolExecutor from the concurrent.futures module download files concurrently, significantly speeding up the process
 
 
@@ -66,17 +66,17 @@
 
 ### Approach:
 
-1.‎ Batch Processing:
+1. Batch Processing:
 - Split the full text HTMl files into smaller batches (500 files per batch to handle large datasets efficiently
 - Set a maximum chunks size (5000) to ensure efficiency while ingesting the documents
-2.‎ Text Extraction:
+2. Text Extraction:
 - Use BeautifulSoup to extract text from the HTML files, normalize the text by removing extra spaces, special characters, and HTML tags
-3.‎ Text Segmentation:
+3. Text Segmentation:
 - Use ViTokenizer from the pyvi library to segment Vietnamese text for better
-4.‎ Embedding with BKAI Vietnamese Bi Encoder model:
+4. Embedding with BKAI Vietnamese Bi Encoder model:
 - Initialize the BKAI Vietnamese Bi Encoder for generate embeddings
 - Split documents into chunks of 2000 characters with an overlap of 20 to ensure meaningful embedding
-5.‎ Create Vector Database:
+5. Create Vector Database:
 - Initialize a ChromaDB vector store
 - Add the processed documents to the vector database, including file paths as metadata for traceability
 - Save the vector database directory as chroma_db
@@ -90,15 +90,15 @@
 
 ### Approach:
 
-1.‎ Query Processing:
+1. Query Processing:
 - Segment the query using ViTokenizer for Vietnamese text
 - Replace informal phrases with formal ones using the custom slang.json file for improved accuracy, also remove any punctuations
-2.‎ Embedding the Query:
+2. Embedding the Query:
 - Use the BKAI Vietnamese Bi Encoder model to generate an embedding for the query
-3.‎ Similarity Search:
+3. Similarity Search:
 - Use LangChain’s similarity search to find the most relevant documents in the vector database
 - Sort the results by relevance score in descending order
-4.‎ Return Top-k Results:
+4. Return Top-k Results:
 - Display the top-k results sorted by their relevance scores
 
 
