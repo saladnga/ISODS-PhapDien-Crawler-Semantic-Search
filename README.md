@@ -58,6 +58,7 @@
     - File path: pdf\_<ItemID>.pdf
     - Designated directory: BoPhapDienDienTu/pdf
 
+
 5. Optimize Downloads with Multiprocessing:
 
 - Use ThreadPoolExecutor from the concurrent.futures module download files concurrently, significantly speeding up the process
