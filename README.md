@@ -52,12 +52,11 @@
 4. Download PDF Files Dynamically:
 
 - Use Selenium and ChromDriver to extract and download PDF files.
-- Locate the PDF link in the data attribute of the <object> tag using XPath
   - For PDF:
     - URL: https://vbpl.vn/tw/Pages/ vbpq-van-ban-goc?&ItemID=<ItemID>
     - File path: pdf\_<ItemID>.pdf
     - Designated directory: BoPhapDienDienTu/pdf
-
+- Locate the PDF link in the data attribute of the <object> tag using XPath
 
 5. Optimize Downloads with Multiprocessing:
 
