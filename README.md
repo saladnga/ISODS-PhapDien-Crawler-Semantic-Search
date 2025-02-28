@@ -12,7 +12,7 @@
 
 ### Objective:
 
-- Download and organize legal documents from the [PhapDien website](phapdien.moj.gov.vn) into structured directories for further processing
+- Download and organize legal documents from the [PhapDien website](https://phapdien.moj.gov.vn/TraCuuPhapDien/Files/BoPhapDienDienTu.zip) into structured directories for further processing
 
 ### Approach:
 
